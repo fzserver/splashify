@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.splashify">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
    <application
         android:label="splashify"
         android:name="${applicationName}"

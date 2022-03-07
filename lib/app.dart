@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:splashify/constants/constants.dart';
 import 'package:splashify/routes/router.gr.dart';
-import 'package:splashify/strings.dart';
+import 'package:splashify/constants/strings.dart';
 
 // assuing this is the root widget of your App
 class Splashify extends StatefulWidget {
