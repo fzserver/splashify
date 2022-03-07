@@ -1,4 +1,4 @@
 class SplashifyConstants {
-  static double? deviceHeight;
-  static double? deviceWidth;
+  // static double? deviceHeight;
+  // static double? deviceWidth;
 }

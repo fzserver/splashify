@@ -26,45 +26,47 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: SplashifyConstants.deviceHeight,
-      width: SplashifyConstants.deviceWidth,
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/coffee.jpg'),
-          fit: BoxFit.cover,
-        ),
-      ),
-      child: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                blurRadius: 30.0,
-                spreadRadius: 5.0,
-                color: Colors.black.withOpacity(.2),
-              ),
-            ],
+    return Scaffold(
+      body: Container(
+        height: 500.0,
+        width: 250.0,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/coffee.jpg'),
+            fit: BoxFit.cover,
           ),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(15.0),
-            child: BackdropFilter(
-              filter: ImageFilter.blur(
-                sigmaX: 20.0,
-                sigmaY: 20.0,
-              ),
-              child: Container(
-                height: 300.0,
-                width: 300.0,
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(.2),
-                  borderRadius: BorderRadius.circular(15.0),
-                  border: Border.all(
-                    width: 1.5,
-                    color: Colors.white.withOpacity(.2),
-                  ),
+        ),
+        child: Center(
+          child: Container(
+            decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 30.0,
+                  spreadRadius: 5.0,
+                  color: Colors.black.withOpacity(.2),
                 ),
-                child: Text('Splashify'),
+              ],
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: BackdropFilter(
+                filter: ImageFilter.blur(
+                  sigmaX: 20.0,
+                  sigmaY: 20.0,
+                ),
+                child: Container(
+                  height: 300.0,
+                  width: 300.0,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(.2),
+                    borderRadius: BorderRadius.circular(15.0),
+                    border: Border.all(
+                      width: 1.5,
+                      color: Colors.white.withOpacity(.2),
+                    ),
+                  ),
+                  child: Text('Splashify'),
+                ),
               ),
             ),
           ),

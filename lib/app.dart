@@ -17,9 +17,6 @@ class _SplashifyState extends State<Splashify> {
   final _splashifyRouter = SplashifyRouter();
   @override
   Widget build(BuildContext context) {
-    final mq = MediaQuery.of(context);
-    SplashifyConstants.deviceHeight = mq.size.height;
-    SplashifyConstants.deviceWidth = mq.size.width;
     return MaterialApp.router(
       routerDelegate: _splashifyRouter.delegate(),
       routeInformationParser: _splashifyRouter.defaultRouteParser(),
