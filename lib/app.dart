@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:splashify/constants/constants.dart';
 import 'package:splashify/routes/router.gr.dart';
 import 'package:splashify/constants/strings.dart';
 
