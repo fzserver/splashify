@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "423612294383",
+    "project_id": "splashify-9bb3e",
+    "storage_bucket": "splashify-9bb3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423612294383:android:e23fda08265fec6126a71a",
+        "android_client_info": {
+          "package_name": "com.frazile.splashify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423612294383-3tb6880vqco2b5055uihp2lmn6jf2edj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2lH6N1T9jxteha6H_7dl4yg2ukmLO7kQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423612294383-3tb6880vqco2b5055uihp2lmn6jf2edj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

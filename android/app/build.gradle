@@ -41,13 +41,33 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+    lintOptions {
+        disable 'InvalidPackage'
+        checkReleaseBuilds false
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.splashify"
+        applicationId "com.frazile.splashify"
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+    }
+
+     flavorDimensions "splashify"
+
+    productFlavors {
+        dev {
+            dimension "splashify"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Dev Splashify"
+        }
+
+        prod {
+            dimension "splashify"
+            resValue "string", "app_name", "Splashify"
+        }
     }
 
     buildTypes {
@@ -65,4 +85,9 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation platform('com.google.firebase:firebase-bom:29.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'

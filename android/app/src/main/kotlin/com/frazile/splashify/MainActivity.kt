@@ -1,4 +1,4 @@
-package com.example.splashify
+package com.frazile.splashify
 
 import io.flutter.embedding.android.FlutterActivity
 
