@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>423612294383-mme5pdancegklv6m9eahn26i60p0ck6h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.423612294383-mme5pdancegklv6m9eahn26i60p0ck6h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA1-6tWR9FlBbZxYolro8-thHCg9rDb8TE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>423612294383</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.frazile.splashify</string>
+	<key>PROJECT_ID</key>
+	<string>splashify-9bb3e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>splashify-9bb3e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:423612294383:ios:b234906b5daa91c226a71a</string>
+</dict>
+</plist>
