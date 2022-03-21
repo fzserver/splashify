@@ -1,6 +1,9 @@
+import 'dart:async';
 import 'dart:ui';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screen_wake/flutter_screen_wake.dart';
+import 'package:splashify/routes/router.gr.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -14,13 +17,24 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // Set the brightness:
     FlutterScreenWake.setBrightness(1.0);
+    navigateToHome();
     super.initState();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
+  }
+
+  navigateToHome() async {
+    Timer(Duration(seconds: 5), () {
+      // 5s over, navigate to a new page
+      context.router.replaceAll(
+        [
+          HomeRouter(),
+        ],
+      );
+    });
   }
 
   @override

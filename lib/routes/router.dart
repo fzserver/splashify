@@ -5,8 +5,8 @@ import '../pages/home/home.dart';
 @AdaptiveAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(page: SplashScreen, initial: true),
-    AutoRoute(page: HomePage),
+    AutoRoute(page: SplashScreen, name: 'SplashRouter', initial: true),
+    AutoRoute(page: HomePage, name: 'HomeRouter'),
   ],
 )
 // extend the generated private router
