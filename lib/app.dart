@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:splashify/apis/unsplash_repo.dart';
 import 'package:splashify/routes/router.gr.dart';
 import 'package:splashify/constants/strings.dart';
+
+import 'blocs/unsplash/bloc/unsplash_bloc.dart';
 
 // assuing this is the root widget of your App
 class Splashify extends StatefulWidget {
@@ -16,15 +20,20 @@ class _SplashifyState extends State<Splashify> {
   final _splashifyRouter = SplashifyRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerDelegate: _splashifyRouter.delegate(),
-      routeInformationParser: _splashifyRouter.defaultRouteParser(),
-      title: SplashifyStrings.title,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-        brightness: Brightness.light,
-        scaffoldBackgroundColor: Colors.white,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<UnsplashBloc>(create: (_) => UnsplashBloc(UnsplashRepo())),
+      ],
+      child: MaterialApp.router(
+        routerDelegate: _splashifyRouter.delegate(),
+        routeInformationParser: _splashifyRouter.defaultRouteParser(),
+        title: SplashifyStrings.title,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.pink,
+          brightness: Brightness.light,
+          scaffoldBackgroundColor: Colors.white,
+        ),
       ),
     );
   }
