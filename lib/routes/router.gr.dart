@@ -21,11 +21,11 @@ class SplashifyRouter extends _i3.RootStackRouter {
 
   @override
   final Map<String, _i3.PageFactory> pagesMap = {
-    SplashScreen.name: (routeData) {
+    SplashRouter.name: (routeData) {
       return _i3.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i1.SplashScreen());
     },
-    HomeRoute.name: (routeData) {
+    HomeRouter.name: (routeData) {
       return _i3.AdaptivePage<dynamic>(
           routeData: routeData, child: const _i2.HomePage());
     }
@@ -33,23 +33,23 @@ class SplashifyRouter extends _i3.RootStackRouter {
 
   @override
   List<_i3.RouteConfig> get routes => [
-        _i3.RouteConfig(SplashScreen.name, path: '/'),
-        _i3.RouteConfig(HomeRoute.name, path: '/home-page')
+        _i3.RouteConfig(SplashRouter.name, path: '/'),
+        _i3.RouteConfig(HomeRouter.name, path: '/home-page')
       ];
 }
 
 /// generated route for
 /// [_i1.SplashScreen]
-class SplashScreen extends _i3.PageRouteInfo<void> {
-  const SplashScreen() : super(SplashScreen.name, path: '/');
+class SplashRouter extends _i3.PageRouteInfo<void> {
+  const SplashRouter() : super(SplashRouter.name, path: '/');
 
-  static const String name = 'SplashScreen';
+  static const String name = 'SplashRouter';
 }
 
 /// generated route for
 /// [_i2.HomePage]
-class HomeRoute extends _i3.PageRouteInfo<void> {
-  const HomeRoute() : super(HomeRoute.name, path: '/home-page');
+class HomeRouter extends _i3.PageRouteInfo<void> {
+  const HomeRouter() : super(HomeRouter.name, path: '/home-page');
 
-  static const String name = 'HomeRoute';
+  static const String name = 'HomeRouter';
 }

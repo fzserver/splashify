@@ -28,7 +28,11 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   auto_route: ^3.2.4
+  cached_network_image: ^3.2.0
+  carousel_slider: ^4.0.0
   cupertino_icons: ^1.0.2
+  equatable: ^2.0.3
+  firebase_auth: ^3.3.9
   firebase_core: ^1.13.1
   firebase_crashlytics: ^2.5.3
   firebase_messaging: ^11.2.8
@@ -37,7 +41,15 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.0.1
   flutter_screen_wake: ^1.0.2
+  freezed_annotation: ^1.1.0
+  fzregex: ^2.0.0
   get_it: ^7.2.0
+  google_fonts: ^2.3.1
+  http: ^0.13.4
+  injectable: ^1.5.3
+  shared_preferences: ^2.0.13
+  url_launcher: ^6.0.20
+  json_annotation: ^4.4.0
 
 dev_dependencies:
   auto_route_generator: ^3.2.3
@@ -46,6 +58,9 @@ dev_dependencies:
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
+  freezed: ^1.1.1
+  injectable_generator: ^1.5.3
+  json_serializable: ^6.1.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -55,7 +55,7 @@ android {
         versionName flutterVersionName
     }
 
-     flavorDimensions "splashify"
+    flavorDimensions "splashify"
 
     productFlavors {
         dev {
