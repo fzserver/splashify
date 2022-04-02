@@ -16,21 +16,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => UnsplashBloc(UnsplashRepo())
-        ..add(
-          UnsplashEvent.load(),
-        ),
-      child: BlocBuilder<UnsplashBloc, UnsplashState>(
-          builder: (context, state) => _build(context, state)),
-    );
+    final handle = context.read<UnsplashBloc>();
+    return BlocBuilder<UnsplashBloc, UnsplashState>(
+        builder: (context, state) => _build(context, state, handle));
   }
 
-  Widget _build(context, UnsplashState state) => state.when(
+  Widget _build(context, UnsplashState state, handle) => state.when(
         unsplasherror: () => _buildError(),
         unsplashloaded: (List<ResultsModel> apiResult) =>
             _buildData(context, apiResult),
         unsplashloading: () => _buildLoading(),
+        unsplashinitial: () {
+          handle.add(UnsplashEvent.load());
+          return _buildLoading();
+        },
       );
 
   Widget _buildError() => Scaffold(

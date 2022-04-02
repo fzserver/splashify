@@ -181,6 +181,10 @@ abstract class LoadUnsplash implements UnsplashEvent {
 class _$UnsplashStateTearOff {
   const _$UnsplashStateTearOff();
 
+  UnsplashInitial unsplashinitial() {
+    return const UnsplashInitial();
+  }
+
   UnsplashLoading unsplashloading() {
     return const UnsplashLoading();
   }
@@ -203,6 +207,7 @@ const $UnsplashState = _$UnsplashStateTearOff();
 mixin _$UnsplashState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() unsplashinitial,
     required TResult Function() unsplashloading,
     required TResult Function(List<ResultsModel> apiResult) unsplashloaded,
     required TResult Function() unsplasherror,
@@ -210,6 +215,7 @@ mixin _$UnsplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -217,6 +223,7 @@ mixin _$UnsplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -225,6 +232,7 @@ mixin _$UnsplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnsplashInitial value) unsplashinitial,
     required TResult Function(UnsplashLoading value) unsplashloading,
     required TResult Function(UnsplashLoaded value) unsplashloaded,
     required TResult Function(UnsplashError value) unsplasherror,
@@ -232,6 +240,7 @@ mixin _$UnsplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -239,6 +248,7 @@ mixin _$UnsplashState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -262,6 +272,123 @@ class _$UnsplashStateCopyWithImpl<$Res>
   final UnsplashState _value;
   // ignore: unused_field
   final $Res Function(UnsplashState) _then;
+}
+
+/// @nodoc
+abstract class $UnsplashInitialCopyWith<$Res> {
+  factory $UnsplashInitialCopyWith(
+          UnsplashInitial value, $Res Function(UnsplashInitial) then) =
+      _$UnsplashInitialCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$UnsplashInitialCopyWithImpl<$Res>
+    extends _$UnsplashStateCopyWithImpl<$Res>
+    implements $UnsplashInitialCopyWith<$Res> {
+  _$UnsplashInitialCopyWithImpl(
+      UnsplashInitial _value, $Res Function(UnsplashInitial) _then)
+      : super(_value, (v) => _then(v as UnsplashInitial));
+
+  @override
+  UnsplashInitial get _value => super._value as UnsplashInitial;
+}
+
+/// @nodoc
+
+class _$UnsplashInitial implements UnsplashInitial {
+  const _$UnsplashInitial();
+
+  @override
+  String toString() {
+    return 'UnsplashState.unsplashinitial()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is UnsplashInitial);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() unsplashinitial,
+    required TResult Function() unsplashloading,
+    required TResult Function(List<ResultsModel> apiResult) unsplashloaded,
+    required TResult Function() unsplasherror,
+  }) {
+    return unsplashinitial();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
+    TResult Function()? unsplashloading,
+    TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
+    TResult Function()? unsplasherror,
+  }) {
+    return unsplashinitial?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
+    TResult Function()? unsplashloading,
+    TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
+    TResult Function()? unsplasherror,
+    required TResult orElse(),
+  }) {
+    if (unsplashinitial != null) {
+      return unsplashinitial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(UnsplashInitial value) unsplashinitial,
+    required TResult Function(UnsplashLoading value) unsplashloading,
+    required TResult Function(UnsplashLoaded value) unsplashloaded,
+    required TResult Function(UnsplashError value) unsplasherror,
+  }) {
+    return unsplashinitial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
+    TResult Function(UnsplashLoading value)? unsplashloading,
+    TResult Function(UnsplashLoaded value)? unsplashloaded,
+    TResult Function(UnsplashError value)? unsplasherror,
+  }) {
+    return unsplashinitial?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
+    TResult Function(UnsplashLoading value)? unsplashloading,
+    TResult Function(UnsplashLoaded value)? unsplashloaded,
+    TResult Function(UnsplashError value)? unsplasherror,
+    required TResult orElse(),
+  }) {
+    if (unsplashinitial != null) {
+      return unsplashinitial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UnsplashInitial implements UnsplashState {
+  const factory UnsplashInitial() = _$UnsplashInitial;
 }
 
 /// @nodoc
@@ -305,6 +432,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() unsplashinitial,
     required TResult Function() unsplashloading,
     required TResult Function(List<ResultsModel> apiResult) unsplashloaded,
     required TResult Function() unsplasherror,
@@ -315,6 +443,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -325,6 +454,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -339,6 +469,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnsplashInitial value) unsplashinitial,
     required TResult Function(UnsplashLoading value) unsplashloading,
     required TResult Function(UnsplashLoaded value) unsplashloaded,
     required TResult Function(UnsplashError value) unsplasherror,
@@ -349,6 +480,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -359,6 +491,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -440,6 +573,7 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() unsplashinitial,
     required TResult Function() unsplashloading,
     required TResult Function(List<ResultsModel> apiResult) unsplashloaded,
     required TResult Function() unsplasherror,
@@ -450,6 +584,7 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -460,6 +595,7 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -474,6 +610,7 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnsplashInitial value) unsplashinitial,
     required TResult Function(UnsplashLoading value) unsplashloading,
     required TResult Function(UnsplashLoaded value) unsplashloaded,
     required TResult Function(UnsplashError value) unsplasherror,
@@ -484,6 +621,7 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -494,6 +632,7 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -557,6 +696,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
+    required TResult Function() unsplashinitial,
     required TResult Function() unsplashloading,
     required TResult Function(List<ResultsModel> apiResult) unsplashloaded,
     required TResult Function() unsplasherror,
@@ -567,6 +707,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -577,6 +718,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unsplashinitial,
     TResult Function()? unsplashloading,
     TResult Function(List<ResultsModel> apiResult)? unsplashloaded,
     TResult Function()? unsplasherror,
@@ -591,6 +733,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
+    required TResult Function(UnsplashInitial value) unsplashinitial,
     required TResult Function(UnsplashLoading value) unsplashloading,
     required TResult Function(UnsplashLoaded value) unsplashloaded,
     required TResult Function(UnsplashError value) unsplasherror,
@@ -601,6 +744,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
@@ -611,6 +755,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
+    TResult Function(UnsplashInitial value)? unsplashinitial,
     TResult Function(UnsplashLoading value)? unsplashloading,
     TResult Function(UnsplashLoaded value)? unsplashloaded,
     TResult Function(UnsplashError value)? unsplasherror,
