@@ -23,11 +23,17 @@ class _$ResultsModelTearOff {
   const _$ResultsModelTearOff();
 
   _ResultsModel call(
-      {required String id, required double width, required double height}) {
+      {required String id,
+      required double width,
+      required double height,
+      required String color,
+      required Urls urls}) {
     return _ResultsModel(
       id: id,
       width: width,
       height: height,
+      color: color,
+      urls: urls,
     );
   }
 
@@ -44,6 +50,8 @@ mixin _$ResultsModel {
   String get id => throw _privateConstructorUsedError;
   double get width => throw _privateConstructorUsedError;
   double get height => throw _privateConstructorUsedError;
+  String get color => throw _privateConstructorUsedError;
+  Urls get urls => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +64,9 @@ abstract class $ResultsModelCopyWith<$Res> {
   factory $ResultsModelCopyWith(
           ResultsModel value, $Res Function(ResultsModel) then) =
       _$ResultsModelCopyWithImpl<$Res>;
-  $Res call({String id, double width, double height});
+  $Res call({String id, double width, double height, String color, Urls urls});
+
+  $UrlsCopyWith<$Res> get urls;
 }
 
 /// @nodoc
@@ -72,6 +82,8 @@ class _$ResultsModelCopyWithImpl<$Res> implements $ResultsModelCopyWith<$Res> {
     Object? id = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? color = freezed,
+    Object? urls = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -86,7 +98,22 @@ class _$ResultsModelCopyWithImpl<$Res> implements $ResultsModelCopyWith<$Res> {
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double,
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+      urls: urls == freezed
+          ? _value.urls
+          : urls // ignore: cast_nullable_to_non_nullable
+              as Urls,
     ));
+  }
+
+  @override
+  $UrlsCopyWith<$Res> get urls {
+    return $UrlsCopyWith<$Res>(_value.urls, (value) {
+      return _then(_value.copyWith(urls: value));
+    });
   }
 }
 
@@ -97,7 +124,10 @@ abstract class _$ResultsModelCopyWith<$Res>
           _ResultsModel value, $Res Function(_ResultsModel) then) =
       __$ResultsModelCopyWithImpl<$Res>;
   @override
-  $Res call({String id, double width, double height});
+  $Res call({String id, double width, double height, String color, Urls urls});
+
+  @override
+  $UrlsCopyWith<$Res> get urls;
 }
 
 /// @nodoc
@@ -115,6 +145,8 @@ class __$ResultsModelCopyWithImpl<$Res> extends _$ResultsModelCopyWithImpl<$Res>
     Object? id = freezed,
     Object? width = freezed,
     Object? height = freezed,
+    Object? color = freezed,
+    Object? urls = freezed,
   }) {
     return _then(_ResultsModel(
       id: id == freezed
@@ -129,6 +161,14 @@ class __$ResultsModelCopyWithImpl<$Res> extends _$ResultsModelCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as double,
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as String,
+      urls: urls == freezed
+          ? _value.urls
+          : urls // ignore: cast_nullable_to_non_nullable
+              as Urls,
     ));
   }
 }
@@ -137,7 +177,11 @@ class __$ResultsModelCopyWithImpl<$Res> extends _$ResultsModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResultsModel implements _ResultsModel {
   _$_ResultsModel(
-      {required this.id, required this.width, required this.height});
+      {required this.id,
+      required this.width,
+      required this.height,
+      required this.color,
+      required this.urls});
 
   factory _$_ResultsModel.fromJson(Map<String, dynamic> json) =>
       _$$_ResultsModelFromJson(json);
@@ -148,10 +192,14 @@ class _$_ResultsModel implements _ResultsModel {
   final double width;
   @override
   final double height;
+  @override
+  final String color;
+  @override
+  final Urls urls;
 
   @override
   String toString() {
-    return 'ResultsModel(id: $id, width: $width, height: $height)';
+    return 'ResultsModel(id: $id, width: $width, height: $height, color: $color, urls: $urls)';
   }
 
   @override
@@ -161,7 +209,9 @@ class _$_ResultsModel implements _ResultsModel {
             other is _ResultsModel &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.width, width) &&
-            const DeepCollectionEquality().equals(other.height, height));
+            const DeepCollectionEquality().equals(other.height, height) &&
+            const DeepCollectionEquality().equals(other.color, color) &&
+            const DeepCollectionEquality().equals(other.urls, urls));
   }
 
   @override
@@ -169,7 +219,9 @@ class _$_ResultsModel implements _ResultsModel {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(width),
-      const DeepCollectionEquality().hash(height));
+      const DeepCollectionEquality().hash(height),
+      const DeepCollectionEquality().hash(color),
+      const DeepCollectionEquality().hash(urls));
 
   @JsonKey(ignore: true)
   @override
@@ -186,7 +238,9 @@ abstract class _ResultsModel implements ResultsModel {
   factory _ResultsModel(
       {required String id,
       required double width,
-      required double height}) = _$_ResultsModel;
+      required double height,
+      required String color,
+      required Urls urls}) = _$_ResultsModel;
 
   factory _ResultsModel.fromJson(Map<String, dynamic> json) =
       _$_ResultsModel.fromJson;
@@ -197,6 +251,10 @@ abstract class _ResultsModel implements ResultsModel {
   double get width;
   @override
   double get height;
+  @override
+  String get color;
+  @override
+  Urls get urls;
   @override
   @JsonKey(ignore: true)
   _$ResultsModelCopyWith<_ResultsModel> get copyWith =>
