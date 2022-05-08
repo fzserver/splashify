@@ -10,3 +10,6 @@ Future<void> main() async {
   setup(true);
   runApp(const Splashify());
 }
+
+
+/// This app uses flutter_bloc state management.
