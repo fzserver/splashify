@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:splashify/models/resultsModel.dart';
+import 'resultsModel.dart';
 
 part 'unsplashModel.freezed.dart';
 part 'unsplashModel.g.dart';

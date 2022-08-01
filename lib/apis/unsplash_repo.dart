@@ -1,24 +1,31 @@
 import 'dart:convert';
+import 'dart:developer';
 
-import 'package:splashify/constants/constants.dart';
-import 'package:splashify/models/resultsModel.dart';
+import 'api_constants.dart';
+import 'requests.dart';
+import '../constants/constants.dart';
+import '../models/resultsModel.dart';
 import 'package:http/http.dart' as http;
 
+import '../getit.dart';
 import '../models/unsplashModel.dart';
 
 class UnsplashRepo {
-  Future<List<ResultsModel>> getUnsplashData() async {
-    print('API STARTED');
-    final result = await http.Client()
-        .get(Uri.parse(SplashifyConstants.unsplashSearchPhotos));
-    if (result.statusCode == 200) {
-      print('200 SUCCESS');
-      Map<String, dynamic> json = jsonDecode(result.body);
-      List<ResultsModel> resultModels = UnsplashModel.fromJson(json).results;
-      return resultModels;
-    } else {
-      print('ERROR');
-      return [];
+  static const String TAG = 'UnsplashRepo';
+
+  Future<dynamic> getSplashifyData() async {
+    try {
+      final result =
+          await getIt<Requests>().getRequest(APIConstants.splashifyEndpoint);
+      // .get(Uri.parse(APIConstants.unsplashSearchPhotos));
+      // List<ResultsModel> resultModels = UnsplashModel.fromJson(result);
+      // } else {
+      //   return [];
+      // }
+      log(result.toString(), name: TAG);
+    } catch (ex, stackTrace) {
+      log('!!! <- getSplashifyData()',
+          name: TAG, error: ex, stackTrace: stackTrace);
     }
   }
 }

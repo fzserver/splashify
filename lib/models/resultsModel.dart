@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:splashify/models/urls.dart';
+import 'urls.dart';
 
 part 'resultsModel.freezed.dart';
 part 'resultsModel.g.dart';

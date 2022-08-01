@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:splashify/apis/unsplash_repo.dart';
-import 'package:splashify/routes/router.gr.dart';
-import 'package:splashify/constants/strings.dart';
+import 'apis/splashify_repo.dart';
+import 'apis/unsplash_repo.dart';
+import 'blocs/splashify/splashify_bloc.dart';
+import 'routes/router.gr.dart';
+import 'constants/strings.dart';
 
 import 'blocs/unsplash/bloc/unsplash_bloc.dart';
 
@@ -23,6 +25,8 @@ class _SplashifyState extends State<Splashify> {
     return MultiBlocProvider(
       providers: [
         BlocProvider<UnsplashBloc>(create: (_) => UnsplashBloc(UnsplashRepo())),
+        BlocProvider<SplashifyBloc>(
+            create: (_) => SplashifyBloc(SplashifyRepo())),
       ],
       child: MaterialApp.router(
         routerDelegate: _splashifyRouter.delegate(),

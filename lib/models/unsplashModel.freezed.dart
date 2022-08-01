@@ -12,34 +12,11 @@ part of 'unsplashModel.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 UnsplashModel _$UnsplashModelFromJson(Map<String, dynamic> json) {
   return _UnsplashModel.fromJson(json);
 }
-
-/// @nodoc
-class _$UnsplashModelTearOff {
-  const _$UnsplashModelTearOff();
-
-  _UnsplashModel call(
-      {required int total,
-      required int total_pages,
-      required List<ResultsModel> results}) {
-    return _UnsplashModel(
-      total: total,
-      total_pages: total_pages,
-      results: results,
-    );
-  }
-
-  UnsplashModel fromJson(Map<String, Object?> json) {
-    return UnsplashModel.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $UnsplashModel = _$UnsplashModelTearOff();
 
 /// @nodoc
 mixin _$UnsplashModel {
@@ -94,25 +71,25 @@ class _$UnsplashModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$UnsplashModelCopyWith<$Res>
+abstract class _$$_UnsplashModelCopyWith<$Res>
     implements $UnsplashModelCopyWith<$Res> {
-  factory _$UnsplashModelCopyWith(
-          _UnsplashModel value, $Res Function(_UnsplashModel) then) =
-      __$UnsplashModelCopyWithImpl<$Res>;
+  factory _$$_UnsplashModelCopyWith(
+          _$_UnsplashModel value, $Res Function(_$_UnsplashModel) then) =
+      __$$_UnsplashModelCopyWithImpl<$Res>;
   @override
   $Res call({int total, int total_pages, List<ResultsModel> results});
 }
 
 /// @nodoc
-class __$UnsplashModelCopyWithImpl<$Res>
+class __$$_UnsplashModelCopyWithImpl<$Res>
     extends _$UnsplashModelCopyWithImpl<$Res>
-    implements _$UnsplashModelCopyWith<$Res> {
-  __$UnsplashModelCopyWithImpl(
-      _UnsplashModel _value, $Res Function(_UnsplashModel) _then)
-      : super(_value, (v) => _then(v as _UnsplashModel));
+    implements _$$_UnsplashModelCopyWith<$Res> {
+  __$$_UnsplashModelCopyWithImpl(
+      _$_UnsplashModel _value, $Res Function(_$_UnsplashModel) _then)
+      : super(_value, (v) => _then(v as _$_UnsplashModel));
 
   @override
-  _UnsplashModel get _value => super._value as _UnsplashModel;
+  _$_UnsplashModel get _value => super._value as _$_UnsplashModel;
 
   @override
   $Res call({
@@ -120,7 +97,7 @@ class __$UnsplashModelCopyWithImpl<$Res>
     Object? total_pages = freezed,
     Object? results = freezed,
   }) {
-    return _then(_UnsplashModel(
+    return _then(_$_UnsplashModel(
       total: total == freezed
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -130,7 +107,7 @@ class __$UnsplashModelCopyWithImpl<$Res>
           : total_pages // ignore: cast_nullable_to_non_nullable
               as int,
       results: results == freezed
-          ? _value.results
+          ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
               as List<ResultsModel>,
     ));
@@ -141,7 +118,10 @@ class __$UnsplashModelCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_UnsplashModel implements _UnsplashModel {
   _$_UnsplashModel(
-      {required this.total, required this.total_pages, required this.results});
+      {required this.total,
+      required this.total_pages,
+      required final List<ResultsModel> results})
+      : _results = results;
 
   factory _$_UnsplashModel.fromJson(Map<String, dynamic> json) =>
       _$$_UnsplashModelFromJson(json);
@@ -150,8 +130,12 @@ class _$_UnsplashModel implements _UnsplashModel {
   final int total;
   @override
   final int total_pages;
+  final List<ResultsModel> _results;
   @override
-  final List<ResultsModel> results;
+  List<ResultsModel> get results {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_results);
+  }
 
   @override
   String toString() {
@@ -162,36 +146,39 @@ class _$_UnsplashModel implements _UnsplashModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UnsplashModel &&
+            other is _$_UnsplashModel &&
             const DeepCollectionEquality().equals(other.total, total) &&
             const DeepCollectionEquality()
                 .equals(other.total_pages, total_pages) &&
-            const DeepCollectionEquality().equals(other.results, results));
+            const DeepCollectionEquality().equals(other._results, _results));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(total),
       const DeepCollectionEquality().hash(total_pages),
-      const DeepCollectionEquality().hash(results));
+      const DeepCollectionEquality().hash(_results));
 
   @JsonKey(ignore: true)
   @override
-  _$UnsplashModelCopyWith<_UnsplashModel> get copyWith =>
-      __$UnsplashModelCopyWithImpl<_UnsplashModel>(this, _$identity);
+  _$$_UnsplashModelCopyWith<_$_UnsplashModel> get copyWith =>
+      __$$_UnsplashModelCopyWithImpl<_$_UnsplashModel>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UnsplashModelToJson(this);
+    return _$$_UnsplashModelToJson(
+      this,
+    );
   }
 }
 
 abstract class _UnsplashModel implements UnsplashModel {
   factory _UnsplashModel(
-      {required int total,
-      required int total_pages,
-      required List<ResultsModel> results}) = _$_UnsplashModel;
+      {required final int total,
+      required final int total_pages,
+      required final List<ResultsModel> results}) = _$_UnsplashModel;
 
   factory _UnsplashModel.fromJson(Map<String, dynamic> json) =
       _$_UnsplashModel.fromJson;
@@ -204,6 +191,6 @@ abstract class _UnsplashModel implements UnsplashModel {
   List<ResultsModel> get results;
   @override
   @JsonKey(ignore: true)
-  _$UnsplashModelCopyWith<_UnsplashModel> get copyWith =>
+  _$$_UnsplashModelCopyWith<_$_UnsplashModel> get copyWith =>
       throw _privateConstructorUsedError;
 }

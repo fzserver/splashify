@@ -1,7 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:splashify/apis/unsplash_repo.dart';
+import '../../../apis/splashify_repo.dart';
 
+import '../../../apis/unsplash_repo.dart';
 import '../../../models/resultsModel.dart';
 
 part 'unsplash_event.dart';
@@ -15,12 +16,14 @@ class UnsplashBloc extends Bloc<UnsplashEvent, UnsplashState> {
       (event, emit) async {
         if (event is LoadUnsplash) {
           emit(UnsplashState.unsplashloading());
-          List<ResultsModel> apiResult = await unsplashRepo.getUnsplashData();
-          if (apiResult == []) {
-            emit(UnsplashState.unsplasherror());
-          } else {
-            emit(UnsplashState.unsplashloaded(apiResult: apiResult));
-          }
+          // List<ResultsModel> apiResult = await
+          unsplashRepo.getSplashifyData;
+          // );
+          // if (apiResult == []) {
+          //   emit(UnsplashState.unsplasherror());
+          // } else {
+          //   emit(UnsplashState.unsplashloaded(apiResult: apiResult));
+          // }
         }
       },
     );

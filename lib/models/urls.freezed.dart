@@ -12,40 +12,11 @@ part of 'urls.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 Urls _$UrlsFromJson(Map<String, dynamic> json) {
   return _Urls.fromJson(json);
 }
-
-/// @nodoc
-class _$UrlsTearOff {
-  const _$UrlsTearOff();
-
-  _Urls call(
-      {String? raw,
-      String? full,
-      String? regular,
-      String? small,
-      String? thumb,
-      String? smallS3}) {
-    return _Urls(
-      raw: raw,
-      full: full,
-      regular: regular,
-      small: small,
-      thumb: thumb,
-      smallS3: smallS3,
-    );
-  }
-
-  Urls fromJson(Map<String, Object?> json) {
-    return Urls.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $Urls = _$UrlsTearOff();
 
 /// @nodoc
 mixin _$Urls {
@@ -121,9 +92,9 @@ class _$UrlsCopyWithImpl<$Res> implements $UrlsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$UrlsCopyWith<$Res> implements $UrlsCopyWith<$Res> {
-  factory _$UrlsCopyWith(_Urls value, $Res Function(_Urls) then) =
-      __$UrlsCopyWithImpl<$Res>;
+abstract class _$$_UrlsCopyWith<$Res> implements $UrlsCopyWith<$Res> {
+  factory _$$_UrlsCopyWith(_$_Urls value, $Res Function(_$_Urls) then) =
+      __$$_UrlsCopyWithImpl<$Res>;
   @override
   $Res call(
       {String? raw,
@@ -135,13 +106,13 @@ abstract class _$UrlsCopyWith<$Res> implements $UrlsCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$UrlsCopyWithImpl<$Res> extends _$UrlsCopyWithImpl<$Res>
-    implements _$UrlsCopyWith<$Res> {
-  __$UrlsCopyWithImpl(_Urls _value, $Res Function(_Urls) _then)
-      : super(_value, (v) => _then(v as _Urls));
+class __$$_UrlsCopyWithImpl<$Res> extends _$UrlsCopyWithImpl<$Res>
+    implements _$$_UrlsCopyWith<$Res> {
+  __$$_UrlsCopyWithImpl(_$_Urls _value, $Res Function(_$_Urls) _then)
+      : super(_value, (v) => _then(v as _$_Urls));
 
   @override
-  _Urls get _value => super._value as _Urls;
+  _$_Urls get _value => super._value as _$_Urls;
 
   @override
   $Res call({
@@ -152,7 +123,7 @@ class __$UrlsCopyWithImpl<$Res> extends _$UrlsCopyWithImpl<$Res>
     Object? thumb = freezed,
     Object? smallS3 = freezed,
   }) {
-    return _then(_Urls(
+    return _then(_$_Urls(
       raw: raw == freezed
           ? _value.raw
           : raw // ignore: cast_nullable_to_non_nullable
@@ -216,7 +187,7 @@ class _$_Urls implements _Urls {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _Urls &&
+            other is _$_Urls &&
             const DeepCollectionEquality().equals(other.raw, raw) &&
             const DeepCollectionEquality().equals(other.full, full) &&
             const DeepCollectionEquality().equals(other.regular, regular) &&
@@ -225,6 +196,7 @@ class _$_Urls implements _Urls {
             const DeepCollectionEquality().equals(other.smallS3, smallS3));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -237,23 +209,25 @@ class _$_Urls implements _Urls {
 
   @JsonKey(ignore: true)
   @override
-  _$UrlsCopyWith<_Urls> get copyWith =>
-      __$UrlsCopyWithImpl<_Urls>(this, _$identity);
+  _$$_UrlsCopyWith<_$_Urls> get copyWith =>
+      __$$_UrlsCopyWithImpl<_$_Urls>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UrlsToJson(this);
+    return _$$_UrlsToJson(
+      this,
+    );
   }
 }
 
 abstract class _Urls implements Urls {
   factory _Urls(
-      {String? raw,
-      String? full,
-      String? regular,
-      String? small,
-      String? thumb,
-      String? smallS3}) = _$_Urls;
+      {final String? raw,
+      final String? full,
+      final String? regular,
+      final String? small,
+      final String? thumb,
+      final String? smallS3}) = _$_Urls;
 
   factory _Urls.fromJson(Map<String, dynamic> json) = _$_Urls.fromJson;
 
@@ -271,5 +245,5 @@ abstract class _Urls implements Urls {
   String? get smallS3;
   @override
   @JsonKey(ignore: true)
-  _$UrlsCopyWith<_Urls> get copyWith => throw _privateConstructorUsedError;
+  _$$_UrlsCopyWith<_$_Urls> get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,5 +1,3 @@
-include: package:flutter_lints/flutter.yaml
-
 linter:
   rules:
     prefer_const_constructors: false
@@ -14,9 +12,13 @@ linter:
     must_be_immutable: false
     avoid_print: false
     prefer_null_aware_operators: false
-
+    prefer_typing_uninitialized_variables: false
+    unnecessary_null_comparison: false
+    invalid_use_of_visible_for_testing_member: false
     # avoid_print: false  # Uncomment to disable the `avoid_print` rule
     # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    sort_child_properties_last: false
+
 
 analyzer:
   exclude:
@@ -24,3 +26,4 @@ analyzer:
     - '**/*.freezed.dart'
   errors:
     invalid_annotation_target: ignore
+

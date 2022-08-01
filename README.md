@@ -2,22 +2,37 @@
 
 Searching images all the available sources.
 
+## Command to install the packages =>
+```shell
+flutter pub get
+```
 
+## Command to build files =>
 ```shell
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
 
-To change the Package Name =>
+## Command to change the Package Name =>
 ```shell
 flutter pub run change_app_package_name:main com.frazile.splashify
 ```
 
-To Build APK =>
+## Command to run the app in Production =>
 ```shell
-flutter build apk --flavor prod -t lib/mainProd.dart
+flutter run -t lib/mainProd.dart --release --flavor=prod
 ```
 
-To copy GoogleService-Info.plist in ios. Script for buildPhases => 
+## Command to build the release apk for Android in Production =>
+```shell
+flutter build apk -t lib/mainProd.dart --release --flavor=prod
+```
+
+## Command to build the release ipa for iOS in Production =>
+```shell
+flutter build ipa -t lib/mainProd.dart --release --flavor=prod
+```
+
+## Code to copy GoogleService-Info.plist in ios. Script for buildPhases => 
 ```shell
 environment="default"
 
@@ -61,5 +76,3 @@ sudo arch -x86_64 gem install ffi
 arch -x86_64 pod install
 arch -x86_64 pod install --repo-update
 ```
-
-### 943 083 658

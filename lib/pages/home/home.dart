@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:splashify/apis/unsplash_repo.dart';
-import 'package:splashify/blocs/unsplash/bloc/unsplash_bloc.dart';
-import 'package:splashify/constants/constants.dart';
+import '../../apis/splashify_repo.dart';
+import '../../blocs/splashify/splashify_bloc.dart';
+import '../../blocs/unsplash/bloc/unsplash_bloc.dart';
+import '../../constants/constants.dart';
 
 import '../../models/resultsModel.dart';
 
@@ -15,21 +16,32 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    super.initState();
+    getimages();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  getimages() {
+    BlocProvider.of<SplashifyBloc>(context).add(FetchSplashify());
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final handle = context.read<UnsplashBloc>();
-    return BlocBuilder<UnsplashBloc, UnsplashState>(
+    final handle = context.read<SplashifyBloc>();
+    return BlocBuilder<SplashifyBloc, SplashifyState>(
         builder: (context, state) => _build(context, state, handle));
   }
 
-  Widget _build(context, UnsplashState state, handle) => state.when(
-        unsplasherror: () => _buildError(),
-        unsplashloaded: (List<ResultsModel> apiResult) =>
-            _buildData(context, apiResult),
-        unsplashloading: () => _buildLoading(),
-        unsplashinitial: () {
-          handle.add(UnsplashEvent.load());
-          return _buildLoading();
-        },
+  Widget _build(context, SplashifyState state, handle) => state.when(
+        fetched: () => _buildData(context),
+        loading: () => _buildLoading(),
+        nointernet: () => _buildError(),
       );
 
   Widget _buildError() => Scaffold(
@@ -39,7 +51,7 @@ class _HomePageState extends State<HomePage> {
         body: Center(child: Text('Error')),
       );
 
-  Widget _buildData(BuildContext context, List<ResultsModel> apiResult) {
+  Widget _buildData(BuildContext context) {
     final mq = MediaQuery.of(context);
     final height = mq.size.height;
     final width = mq.size.width;
@@ -53,19 +65,12 @@ class _HomePageState extends State<HomePage> {
           width: width * .9,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: NetworkImage(apiResult[4].urls.full!),
+              image: NetworkImage(''),
               fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.circular(20.0),
-            boxShadow: [
-              BoxShadow(
-                offset: Offset(1.0, 1.0),
-                color: SplashifyConstants.hexToColor(apiResult[4].color),
-                blurRadius: 5.0,
-                spreadRadius: 5.0,
-              ),
-            ],
           ),
+          child: Text(''),
         ),
       ),
     );

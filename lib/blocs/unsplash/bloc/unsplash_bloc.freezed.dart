@@ -12,19 +12,7 @@ part of 'unsplash_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$UnsplashEventTearOff {
-  const _$UnsplashEventTearOff();
-
-  LoadUnsplash load() {
-    return const LoadUnsplash();
-  }
-}
-
-/// @nodoc
-const $UnsplashEvent = _$UnsplashEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$UnsplashEvent {
@@ -80,21 +68,22 @@ class _$UnsplashEventCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $LoadUnsplashCopyWith<$Res> {
-  factory $LoadUnsplashCopyWith(
-          LoadUnsplash value, $Res Function(LoadUnsplash) then) =
-      _$LoadUnsplashCopyWithImpl<$Res>;
+abstract class _$$LoadUnsplashCopyWith<$Res> {
+  factory _$$LoadUnsplashCopyWith(
+          _$LoadUnsplash value, $Res Function(_$LoadUnsplash) then) =
+      __$$LoadUnsplashCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadUnsplashCopyWithImpl<$Res> extends _$UnsplashEventCopyWithImpl<$Res>
-    implements $LoadUnsplashCopyWith<$Res> {
-  _$LoadUnsplashCopyWithImpl(
-      LoadUnsplash _value, $Res Function(LoadUnsplash) _then)
-      : super(_value, (v) => _then(v as LoadUnsplash));
+class __$$LoadUnsplashCopyWithImpl<$Res>
+    extends _$UnsplashEventCopyWithImpl<$Res>
+    implements _$$LoadUnsplashCopyWith<$Res> {
+  __$$LoadUnsplashCopyWithImpl(
+      _$LoadUnsplash _value, $Res Function(_$LoadUnsplash) _then)
+      : super(_value, (v) => _then(v as _$LoadUnsplash));
 
   @override
-  LoadUnsplash get _value => super._value as LoadUnsplash;
+  _$LoadUnsplash get _value => super._value as _$LoadUnsplash;
 }
 
 /// @nodoc
@@ -110,7 +99,7 @@ class _$LoadUnsplash implements LoadUnsplash {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is LoadUnsplash);
+        (other.runtimeType == runtimeType && other is _$LoadUnsplash);
   }
 
   @override
@@ -176,32 +165,6 @@ class _$LoadUnsplash implements LoadUnsplash {
 abstract class LoadUnsplash implements UnsplashEvent {
   const factory LoadUnsplash() = _$LoadUnsplash;
 }
-
-/// @nodoc
-class _$UnsplashStateTearOff {
-  const _$UnsplashStateTearOff();
-
-  UnsplashInitial unsplashinitial() {
-    return const UnsplashInitial();
-  }
-
-  UnsplashLoading unsplashloading() {
-    return const UnsplashLoading();
-  }
-
-  UnsplashLoaded unsplashloaded({required List<ResultsModel> apiResult}) {
-    return UnsplashLoaded(
-      apiResult: apiResult,
-    );
-  }
-
-  UnsplashError unsplasherror() {
-    return const UnsplashError();
-  }
-}
-
-/// @nodoc
-const $UnsplashState = _$UnsplashStateTearOff();
 
 /// @nodoc
 mixin _$UnsplashState {
@@ -275,22 +238,22 @@ class _$UnsplashStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $UnsplashInitialCopyWith<$Res> {
-  factory $UnsplashInitialCopyWith(
-          UnsplashInitial value, $Res Function(UnsplashInitial) then) =
-      _$UnsplashInitialCopyWithImpl<$Res>;
+abstract class _$$UnsplashInitialCopyWith<$Res> {
+  factory _$$UnsplashInitialCopyWith(
+          _$UnsplashInitial value, $Res Function(_$UnsplashInitial) then) =
+      __$$UnsplashInitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UnsplashInitialCopyWithImpl<$Res>
+class __$$UnsplashInitialCopyWithImpl<$Res>
     extends _$UnsplashStateCopyWithImpl<$Res>
-    implements $UnsplashInitialCopyWith<$Res> {
-  _$UnsplashInitialCopyWithImpl(
-      UnsplashInitial _value, $Res Function(UnsplashInitial) _then)
-      : super(_value, (v) => _then(v as UnsplashInitial));
+    implements _$$UnsplashInitialCopyWith<$Res> {
+  __$$UnsplashInitialCopyWithImpl(
+      _$UnsplashInitial _value, $Res Function(_$UnsplashInitial) _then)
+      : super(_value, (v) => _then(v as _$UnsplashInitial));
 
   @override
-  UnsplashInitial get _value => super._value as UnsplashInitial;
+  _$UnsplashInitial get _value => super._value as _$UnsplashInitial;
 }
 
 /// @nodoc
@@ -306,7 +269,7 @@ class _$UnsplashInitial implements UnsplashInitial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UnsplashInitial);
+        (other.runtimeType == runtimeType && other is _$UnsplashInitial);
   }
 
   @override
@@ -392,22 +355,22 @@ abstract class UnsplashInitial implements UnsplashState {
 }
 
 /// @nodoc
-abstract class $UnsplashLoadingCopyWith<$Res> {
-  factory $UnsplashLoadingCopyWith(
-          UnsplashLoading value, $Res Function(UnsplashLoading) then) =
-      _$UnsplashLoadingCopyWithImpl<$Res>;
+abstract class _$$UnsplashLoadingCopyWith<$Res> {
+  factory _$$UnsplashLoadingCopyWith(
+          _$UnsplashLoading value, $Res Function(_$UnsplashLoading) then) =
+      __$$UnsplashLoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UnsplashLoadingCopyWithImpl<$Res>
+class __$$UnsplashLoadingCopyWithImpl<$Res>
     extends _$UnsplashStateCopyWithImpl<$Res>
-    implements $UnsplashLoadingCopyWith<$Res> {
-  _$UnsplashLoadingCopyWithImpl(
-      UnsplashLoading _value, $Res Function(UnsplashLoading) _then)
-      : super(_value, (v) => _then(v as UnsplashLoading));
+    implements _$$UnsplashLoadingCopyWith<$Res> {
+  __$$UnsplashLoadingCopyWithImpl(
+      _$UnsplashLoading _value, $Res Function(_$UnsplashLoading) _then)
+      : super(_value, (v) => _then(v as _$UnsplashLoading));
 
   @override
-  UnsplashLoading get _value => super._value as UnsplashLoading;
+  _$UnsplashLoading get _value => super._value as _$UnsplashLoading;
 }
 
 /// @nodoc
@@ -423,7 +386,7 @@ class _$UnsplashLoading implements UnsplashLoading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UnsplashLoading);
+        (other.runtimeType == runtimeType && other is _$UnsplashLoading);
   }
 
   @override
@@ -509,31 +472,31 @@ abstract class UnsplashLoading implements UnsplashState {
 }
 
 /// @nodoc
-abstract class $UnsplashLoadedCopyWith<$Res> {
-  factory $UnsplashLoadedCopyWith(
-          UnsplashLoaded value, $Res Function(UnsplashLoaded) then) =
-      _$UnsplashLoadedCopyWithImpl<$Res>;
+abstract class _$$UnsplashLoadedCopyWith<$Res> {
+  factory _$$UnsplashLoadedCopyWith(
+          _$UnsplashLoaded value, $Res Function(_$UnsplashLoaded) then) =
+      __$$UnsplashLoadedCopyWithImpl<$Res>;
   $Res call({List<ResultsModel> apiResult});
 }
 
 /// @nodoc
-class _$UnsplashLoadedCopyWithImpl<$Res>
+class __$$UnsplashLoadedCopyWithImpl<$Res>
     extends _$UnsplashStateCopyWithImpl<$Res>
-    implements $UnsplashLoadedCopyWith<$Res> {
-  _$UnsplashLoadedCopyWithImpl(
-      UnsplashLoaded _value, $Res Function(UnsplashLoaded) _then)
-      : super(_value, (v) => _then(v as UnsplashLoaded));
+    implements _$$UnsplashLoadedCopyWith<$Res> {
+  __$$UnsplashLoadedCopyWithImpl(
+      _$UnsplashLoaded _value, $Res Function(_$UnsplashLoaded) _then)
+      : super(_value, (v) => _then(v as _$UnsplashLoaded));
 
   @override
-  UnsplashLoaded get _value => super._value as UnsplashLoaded;
+  _$UnsplashLoaded get _value => super._value as _$UnsplashLoaded;
 
   @override
   $Res call({
     Object? apiResult = freezed,
   }) {
-    return _then(UnsplashLoaded(
+    return _then(_$UnsplashLoaded(
       apiResult: apiResult == freezed
-          ? _value.apiResult
+          ? _value._apiResult
           : apiResult // ignore: cast_nullable_to_non_nullable
               as List<ResultsModel>,
     ));
@@ -543,10 +506,15 @@ class _$UnsplashLoadedCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UnsplashLoaded implements UnsplashLoaded {
-  const _$UnsplashLoaded({required this.apiResult});
+  const _$UnsplashLoaded({required final List<ResultsModel> apiResult})
+      : _apiResult = apiResult;
 
+  final List<ResultsModel> _apiResult;
   @override
-  final List<ResultsModel> apiResult;
+  List<ResultsModel> get apiResult {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_apiResult);
+  }
 
   @override
   String toString() {
@@ -557,18 +525,19 @@ class _$UnsplashLoaded implements UnsplashLoaded {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is UnsplashLoaded &&
-            const DeepCollectionEquality().equals(other.apiResult, apiResult));
+            other is _$UnsplashLoaded &&
+            const DeepCollectionEquality()
+                .equals(other._apiResult, _apiResult));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(apiResult));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_apiResult));
 
   @JsonKey(ignore: true)
   @override
-  $UnsplashLoadedCopyWith<UnsplashLoaded> get copyWith =>
-      _$UnsplashLoadedCopyWithImpl<UnsplashLoaded>(this, _$identity);
+  _$$UnsplashLoadedCopyWith<_$UnsplashLoaded> get copyWith =>
+      __$$UnsplashLoadedCopyWithImpl<_$UnsplashLoaded>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -646,32 +615,32 @@ class _$UnsplashLoaded implements UnsplashLoaded {
 }
 
 abstract class UnsplashLoaded implements UnsplashState {
-  const factory UnsplashLoaded({required List<ResultsModel> apiResult}) =
+  const factory UnsplashLoaded({required final List<ResultsModel> apiResult}) =
       _$UnsplashLoaded;
 
   List<ResultsModel> get apiResult;
   @JsonKey(ignore: true)
-  $UnsplashLoadedCopyWith<UnsplashLoaded> get copyWith =>
+  _$$UnsplashLoadedCopyWith<_$UnsplashLoaded> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $UnsplashErrorCopyWith<$Res> {
-  factory $UnsplashErrorCopyWith(
-          UnsplashError value, $Res Function(UnsplashError) then) =
-      _$UnsplashErrorCopyWithImpl<$Res>;
+abstract class _$$UnsplashErrorCopyWith<$Res> {
+  factory _$$UnsplashErrorCopyWith(
+          _$UnsplashError value, $Res Function(_$UnsplashError) then) =
+      __$$UnsplashErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UnsplashErrorCopyWithImpl<$Res>
+class __$$UnsplashErrorCopyWithImpl<$Res>
     extends _$UnsplashStateCopyWithImpl<$Res>
-    implements $UnsplashErrorCopyWith<$Res> {
-  _$UnsplashErrorCopyWithImpl(
-      UnsplashError _value, $Res Function(UnsplashError) _then)
-      : super(_value, (v) => _then(v as UnsplashError));
+    implements _$$UnsplashErrorCopyWith<$Res> {
+  __$$UnsplashErrorCopyWithImpl(
+      _$UnsplashError _value, $Res Function(_$UnsplashError) _then)
+      : super(_value, (v) => _then(v as _$UnsplashError));
 
   @override
-  UnsplashError get _value => super._value as UnsplashError;
+  _$UnsplashError get _value => super._value as _$UnsplashError;
 }
 
 /// @nodoc
@@ -687,7 +656,7 @@ class _$UnsplashError implements UnsplashError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UnsplashError);
+        (other.runtimeType == runtimeType && other is _$UnsplashError);
   }
 
   @override
