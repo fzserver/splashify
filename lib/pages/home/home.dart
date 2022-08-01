@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _build(context, SplashifyState state, handle) => state.when(
-        fetched: () => _buildData(context),
+        fetched: (data) => _buildData(context),
         loading: () => _buildLoading(),
         nointernet: () => _buildError(),
       );
