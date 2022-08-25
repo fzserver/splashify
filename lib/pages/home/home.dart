@@ -6,6 +6,7 @@ import '../../blocs/unsplash/bloc/unsplash_bloc.dart';
 import '../../constants/constants.dart';
 
 import '../../models/resultsModel.dart';
+import '../../models/splashifyModel.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,7 +40,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _build(context, SplashifyState state, handle) => state.when(
-        fetched: (data) => _buildData(context),
+        fetched: (data) => _buildData(context, data),
         loading: () => _buildLoading(),
         nointernet: () => _buildError(),
       );
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
         body: Center(child: Text('Error')),
       );
 
-  Widget _buildData(BuildContext context) {
+  Widget _buildData(BuildContext context, SplashifyModel? data) {
     final mq = MediaQuery.of(context);
     final height = mq.size.height;
     final width = mq.size.width;
@@ -59,18 +60,31 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Splashify'),
       ),
-      body: Center(
-        child: Container(
-          height: height * .8,
-          width: width * .9,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(''),
-              fit: BoxFit.cover,
+      body: GridView.count(
+        crossAxisCount: 2,
+        childAspectRatio: .64,
+        children: List.generate(
+          data!.categories![0].endcount!,
+          (i) => Center(
+            child: Container(
+              height: height * .8,
+              width: width * .9,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    data.baseurl! +
+                        data.categories![0].dir! +
+                        data.categories![0].prefix! +
+                        (i + 1).toString() +
+                        ".jpg",
+                  ),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(5.0),
+              ),
+              // child: Text(''),
             ),
-            borderRadius: BorderRadius.circular(20.0),
           ),
-          child: Text(''),
         ),
       ),
     );

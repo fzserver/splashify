@@ -22,7 +22,7 @@ class SplashifyBloc extends Bloc<SplashifyEvent, SplashifyState> {
       emit(SplashifyState.loading());
       SplashifyModel data = await splashifyRepo.getSplashifyData();
       log('${data}', name: 'SPLASHIFYBLOC');
-      emit(SplashifyState.fetched());
+      emit(SplashifyState.fetched(data: data));
     } catch (e) {
       emit(SplashifyState.nointernet());
     }
