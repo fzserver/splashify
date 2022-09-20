@@ -27,6 +27,11 @@ flutter run -t lib/mainProd.dart --release --flavor=prod
 flutter build apk -t lib/mainProd.dart --release --flavor=prod
 ```
 
+## Command to build web in Production =>
+```shell
+flutter build web -t lib/mainProd.dart --dart-define=flavor=prod
+```
+
 ## Command to build the release ipa for iOS in Production =>
 ```shell
 flutter build ipa -t lib/mainProd.dart --release --flavor=prod
